@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffFinder.Domain", "StuffFinder.Domain\StuffFinder.Domain.csproj", "{46746A85-90E5-4C83-B7C3-67EB5FF05ECE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46746A85-90E5-4C83-B7C3-67EB5FF05ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46746A85-90E5-4C83-B7C3-67EB5FF05ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46746A85-90E5-4C83-B7C3-67EB5FF05ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46746A85-90E5-4C83-B7C3-67EB5FF05ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFBEA0FE-4C6B-4749-814F-E296A21C0A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBEA0FE-4C6B-4749-814F-E296A21C0A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBEA0FE-4C6B-4749-814F-E296A21C0A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBEA0FE-4C6B-4749-814F-E296A21C0A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66AC06C2-5B1B-4668-AF9B-05809805A1E6}
+	EndGlobalSection
+EndGlobal

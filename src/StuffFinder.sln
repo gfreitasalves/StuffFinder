@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuffFinder.Domain", "Stuff
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuffFinder.Infrastructure", "StuffFinder.Infrastructure\StuffFinder.Infrastructure.csproj", "{0A02D494-9E6A-494F-AF72-D0A48DBFE19A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffFinder.Application", "StuffFinder.Application\StuffFinder.Application.csproj", "{4F08233D-00AD-496C-975F-1633D524F6D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0A02D494-9E6A-494F-AF72-D0A48DBFE19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A02D494-9E6A-494F-AF72-D0A48DBFE19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A02D494-9E6A-494F-AF72-D0A48DBFE19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F08233D-00AD-496C-975F-1633D524F6D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F08233D-00AD-496C-975F-1633D524F6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F08233D-00AD-496C-975F-1633D524F6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F08233D-00AD-496C-975F-1633D524F6D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

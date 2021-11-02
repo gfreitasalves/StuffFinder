@@ -31,23 +31,23 @@ namespace StuffFinder.Application.Initializers
         /// </summary>
         public void Seed()
         {
-            CustomersLoader();
-            ProductsLoader();
+            StuffLoader();
+            StuffContainerLoader();
         }
 
         /// <summary>
         /// Load initial <see cref="Stuff"/>.
         /// </summary>
         /// <param name="quantity">Quantity of <see cref="Stuff"/> to include in the repository.</param>
-        private void CustomersLoader(int quantity =3) =>
+        private void StuffLoader(int quantity =3) =>
             Enumerable.Range(1, quantity).ToList().ForEach(index => _stuffService.Add(new Stuff(index,$"Stuff-{index}")));
 
         /// <summary>
         /// Load initial <see cref="StuffContainer"/>.
         /// </summary>
         /// <param name="quantity">Quantity of <see cref="StuffContainer"/> to include in the repository.</param>
-        private void ProductsLoader(int quantity = 3) =>
-            Enumerable.Range(1, quantity).ToList().ForEach(index => _stuffContainerService.Add(new StuffContainer($"StuffContainer-{index}", _stuffService.Get(index))));
+        private void StuffContainerLoader(int quantity = 3) =>
+            Enumerable.Range(1, quantity).ToList().ForEach(index => _stuffContainerService.Add(new StuffContainer($"StuffContainer-{index}", _stuffService.Get(index).Entity)));
 
        
     }

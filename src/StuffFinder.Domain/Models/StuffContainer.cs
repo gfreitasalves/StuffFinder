@@ -1,19 +1,26 @@
 ﻿using StuffFinder.Domain.Repositories;
+using StuffFinder.Domain.Validators;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace StuffFinder.Domain.Models
 {
-    public class StuffContainer : BaseModel
+    public class StuffContainer : BaseValidateModel<StuffContainerValidator, StuffContainer>, IModelValidator<StuffContainer>
     {
-        public StuffContainer(string nome, Stuff stuff)
+        public StuffContainer()
         {
-            Nome = nome;
+
+        }
+
+        public StuffContainer(string name, Stuff stuff)
+        {
+            Name = name;
             Stuffs = new List<Stuff>();
             Stuffs.Add(stuff);
         }
-        public string Nome { get; set; }
+
+        public string Name { get; set; }
         public int? IdInsideOfContainer { get; set; }
         public StuffContainer InsideOfContainer { get; set; }
         public ICollection<Stuff> Stuffs { get; set; }

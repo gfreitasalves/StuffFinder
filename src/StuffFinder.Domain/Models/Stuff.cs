@@ -1,21 +1,23 @@
-﻿using System;
+﻿using StuffFinder.Domain.Responses;
+using StuffFinder.Domain.Validators;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace StuffFinder.Domain.Models
 {
-    public class Stuff: BaseModel
+    public class Stuff : BaseValidateModel<StuffValidator, Stuff>, IModelValidator<Stuff>
     {
         public Stuff()
         {
 
         }
-        public Stuff(int id ,string nome)
+        public Stuff(int id, string name)
         {
             Id = id;
-            Nome = nome;
+            Name = name;
         }
-        public string Nome { get; set; }
+        public string Name { get; set; }
         public int IdContainer { get; set; }
         public StuffContainer Container { get; set; }
     }

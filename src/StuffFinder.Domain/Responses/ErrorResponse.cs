@@ -7,7 +7,7 @@ namespace StuffFinder.Domain.Responses
     /// <summary>
     /// Encapsulate the errors in a unique object to be used as response for the API controllers.
     /// </summary>
-    public class ErrorResponse : Response
+    public class ErrorResponse<T> : Response<T>
     {
         /// <summary>
         /// A generic message used as a friendly one when the instance is created from an <see cref="Exception"/>.

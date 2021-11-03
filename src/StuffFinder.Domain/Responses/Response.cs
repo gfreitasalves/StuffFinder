@@ -4,24 +4,29 @@ using System.Text;
 
 namespace StuffFinder.Domain.Responses
 {
-    public class Response<T>
+    public class Response<T>: IResponse
     {
         public Response()
         {
             _errors = new List<string>();
+            Code = 200;
         }
 
         public Response(T entity)
         {
-            Entity = entity;
+            Data = entity;
+            Code = 200;
         }
 
         public Response(T entity, List<string> errors)
         {
             _errors = errors;
-            Entity = entity;
+            Data = entity;
+            Code = 500;
         }
-        public T Entity { get; set; }
+        public int Code { get; set; }
+
+        public T Data { get; set; }
 
         public string Message { get; set; }
 

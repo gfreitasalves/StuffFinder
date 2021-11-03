@@ -35,9 +35,9 @@ namespace StuffFinder.Application.Services
 
             var responseValid = entity.Validate();
 
-            if (responseValid.Entity)
+            if (responseValid.Data)
             {
-                response = new Response<int>() { Entity = Repository.AddOrUpdate(entity) };
+                response = new Response<int>() { Data = Repository.AddOrUpdate(entity) };
             }
 
             return response;
@@ -49,29 +49,29 @@ namespace StuffFinder.Application.Services
 
             var responseValid = entity.Validate();
 
-            if (responseValid.Entity)
+            if (responseValid.Data)
             {
-                response = new Response<bool>() { Entity = Repository.AddOrUpdate(entity) == entity.Id };
+                response = new Response<bool>() { Data = Repository.AddOrUpdate(entity) == entity.Id };
             }
 
             return response;
         }
 
         /// <inheritdoc />
-        public virtual Response<IEnumerable<T>> Get() => new Response<IEnumerable<T>>() { Entity = Repository.Get() };
+        public virtual Response<IEnumerable<T>> Get() => new Response<IEnumerable<T>>() { Data = Repository.Get() };
 
         /// <inheritdoc />
         public virtual Response<T> Get(int id) => GetById(id);
 
 
         /// <inheritdoc />
-        public virtual Response<bool> Delete(int id) => new Response<bool>() { Entity = Repository.Delete(customer => customer.IsId(id)) == 1 };
+        public virtual Response<bool> Delete(int id) => new Response<bool>() { Data = Repository.Delete(customer => customer.IsId(id)) == 1 };
 
         /// <summary>
         /// Filter the repository to select a <see cref="Customer"/> using the identifier.
         /// </summary>
         /// <param name="id">The <see cref="Customer"/> identifier to search.</param>
         /// <returns>The <see cref="Customer"/> that matched with the identifier requested.</returns>
-        protected Response<T> GetById(int id) => new Response<T>() { Entity = Repository.Get(customer => customer.IsId(id)).FirstOrDefault() };
+        protected Response<T> GetById(int id) => new Response<T>() { Data = Repository.Get(customer => customer.IsId(id)).FirstOrDefault() };
     }
 }

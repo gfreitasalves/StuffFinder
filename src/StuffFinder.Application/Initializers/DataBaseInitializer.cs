@@ -47,7 +47,7 @@ namespace StuffFinder.Application.Initializers
         /// </summary>
         /// <param name="quantity">Quantity of <see cref="StuffContainer"/> to include in the repository.</param>
         private void StuffContainerLoader(int quantity = 3) =>
-            Enumerable.Range(1, quantity).ToList().ForEach(index => _stuffContainerService.Add(new StuffContainer($"StuffContainer-{index}", _stuffService.Get(index).Entity)));
+            Enumerable.Range(1, quantity).ToList().ForEach(index => _stuffContainerService.Add(new StuffContainer($"StuffContainer-{index}", _stuffService.Get(index).Data)));
 
        
     }

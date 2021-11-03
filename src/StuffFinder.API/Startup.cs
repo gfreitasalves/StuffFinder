@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,10 +8,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using StuffFinder.API.ViewModels;
 using StuffFinder.Application;
 using StuffFinder.Application.Initializers;
 using StuffFinder.Application.Services;
+using StuffFinder.Domain.Models;
 using StuffFinder.Domain.Repositories;
+using StuffFinder.Domain.Responses;
 using StuffFinder.Domain.Services;
 using StuffFinder.Infrastructure;
 using StuffFinder.Infrastructure.Repositories;
@@ -36,6 +40,8 @@ namespace StuffFinder.API
             //Stuff Finder Modules
             services.AddApplicationModule();
             services.AddDataBaseInMemoryModule();
+
+            services.AddSingleton(AutoMapperConfiguration.GetConfiguration().CreateMapper());
 
             services.AddControllers()
                 .ConfigureApiBehaviorOptions(options =>
